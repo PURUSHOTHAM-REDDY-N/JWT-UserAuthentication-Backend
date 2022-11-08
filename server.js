@@ -15,7 +15,7 @@ app.use(cors({ origin: true, credentials: true }));
 //CONNECTING WITH MONGOOSE
 mongoose.connect(process.env.URL,{useNewUrlParser:true,useUnifiedTopology:true}).then((res)=>{
     console.log("db connected")
-    app.listen(process.env.PORT,()=>{
+    app.listen(process.env.PORT || 8000,()=>{
         console.log(`server running on ${process.env.PORT}`)
     })
 }).catch(err=>console.log(err))
