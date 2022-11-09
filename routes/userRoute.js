@@ -13,3 +13,7 @@ router.post('/register',register)
 router.post('/login',login)
 
 module.exports=router;
+
+// PORT=503
+// SECRET_KEY="purushotham reddy"
+// URL="mongodb+srv://sunny:sunnyimsunny@cluster0.wl8eytf.mongodb.net/?retryWrites=true&w=majority"
