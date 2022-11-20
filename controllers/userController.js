@@ -72,7 +72,9 @@ module.exports.register=async (req,res,next) => {
 
     res.cookie("jwt",token,{
         withCredentials:true,
+        secure:true,
         httpOnly:false,
+        sameSite:"none"
         maxAge:maxAge*1000});
         
         res.status(201).json({user:user._id,created:true})
