@@ -12,6 +12,8 @@ const authRoute=require('./routes/userRoute')
 const app=express();
 app.use(cors({ origin: true, credentials: true }));
 
+app.set("trust proxy",1)
+
 //CONNECTING WITH MONGOOSE
 mongoose.connect(process.env.URL,{useNewUrlParser:true,useUnifiedTopology:true}).then((res)=>{
     console.log("db connected")
