@@ -22,23 +22,7 @@ mongoose.connect(process.env.URL,{useNewUrlParser:true,useUnifiedTopology:true})
     })
 }).catch(err=>console.log(err))
 
-var options = {
-  dotfiles: 'ignore',
-  etag: false,
-  extensions: ['htm', 'html'],
-  index: false,
-  maxAge: '1d',
-  redirect: false,
-  setHeaders: function (res, path, stat) {
-    res.set({
-  'Access-Control-Allow-Origin':'https://purushotham.dev/',
-  'Access-Control-Allow-Credentials': true,
-  'Access-Control-Allow-Headers': 'Content-Type, *'
-})
-  }
-}
 
-app.use(express.static('public', options))
 
 
 app.use(cookieParser())
