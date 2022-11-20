@@ -109,6 +109,7 @@ module.exports.login=async (req,res,next)=>{
                 // res.json("successfully logged in")
             }
             res.send();
+        next();
         
     } catch (error) {
         
