@@ -22,6 +22,12 @@ mongoose.connect(process.env.URL,{useNewUrlParser:true,useUnifiedTopology:true})
     })
 }).catch(err=>console.log(err))
 
+res.set({
+  'Access-Control-Allow-Origin':'https://purushotham.dev/',
+  'Access-Control-Allow-Credentials': true,
+  'Access-Control-Allow-Headers': 'Content-Type, *'
+})
+
 
 app.use(cookieParser())
 app.use(express.json());
