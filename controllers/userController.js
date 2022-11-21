@@ -73,7 +73,7 @@ module.exports.register=async (req,res,next) => {
      res.cookie("jwt",token,{
         withCredentials:true,
         httpOnly:false,
-        //domain: 'purushotham.dev',
+        domain: 'https://www.purushotham.dev/',
         maxAge:maxAge*1000});
         
         res.status(201).json({user:user._id,created:true})
