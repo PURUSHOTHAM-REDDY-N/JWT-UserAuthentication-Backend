@@ -69,6 +69,7 @@ module.exports.register=async (req,res,next) => {
 
 
     const token=createToken(user._id);
+       console.log("now working")
 
      res.cookie("jwt",token,{
         withCredentials:true,
