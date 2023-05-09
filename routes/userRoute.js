@@ -16,4 +16,4 @@ module.exports=router;
 
 // PORT=503
 // SECRET_KEY="purushotham reddy"
-// URL="mongodb+srv://sunny:sunnyimsunny@cluster0.wl8eytf.mongodb.net/?retryWrites=true&w=majority"
+// URL="mongodb+srv://purushotham:purushotham@cluster0.9gpdgcz.mongodb.net/?retryWrites=true&w=majority"

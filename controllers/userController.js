@@ -70,14 +70,8 @@ module.exports.register=async (req,res,next) => {
 
     const token=createToken(user._id);
        console.log("now working")
-
-     res.cookie("jwt",token,{
-        withCredentials:true,
-        httpOnly:false,
-        domain: '.purushotham.dev',
-        maxAge:maxAge*1000});
         
-        res.status(201).json({user:user._id,created:true})
+        res.status(201).json({user:user._id,created:true,jwt:token})
         
         
     } catch (err) {
@@ -102,10 +96,12 @@ module.exports.login=async (req,res,next)=>{
         if(user){
             const token=createToken(user._id);
             
-            res.cookie("jwt",token,{
-                withCredentials:true,
-                httpOnly:false,
-                maxAge:maxAge*1000});
+            res.json({jwt:token});
+
+            // res.cookie("jwt",token,{
+            //     withCredentials:true,
+            //     httpOnly:false,
+            //     maxAge:maxAge*1000});
 
                 
                 // res.json("successfully logged in")
